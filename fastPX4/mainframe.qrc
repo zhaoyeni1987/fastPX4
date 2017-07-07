@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/mainframe">
+        <file>images/px4logo.png</file>
+        <file>templete/temp_cmakelists</file>
+        <file>templete/temp_main_c</file>
+    </qresource>
+</RCC>

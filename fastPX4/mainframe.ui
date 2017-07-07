@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainframeClass</class>
+ <widget class="QMainWindow" name="mainframeClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>557</width>
+    <height>419</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>fastPX4 @ zhaoyeni</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>50</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>work path:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditPath"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonLoadPath">
+        <property name="text">
+         <string>folder</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>develop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>px4 Version:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxPX4Version">
+        <item>
+         <property name="text">
+          <string>px4fmu-v1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px4fmu-v2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px4fmu-v3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px4fmu-v4</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QListWidget" name="listWidgetItem">
+        <property name="minimumSize">
+         <size>
+          <width>454</width>
+          <height>235</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>px4_cmake</string>
+         </property>
+         <property name="toolTip">
+          <string>模块编译管控，需要编译什么模块在该文件中进行调整</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px4_base_cmake_config</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>rcS</string>
+         </property>
+         <property name="toolTip">
+          <string>启动脚本</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mixers</string>
+         </property>
+         <property name="toolTip">
+          <string>均衡器配置文件，涉及pwm的属性配置</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>nuttx_define</string>
+         </property>
+         <property name="toolTip">
+          <string>nuttx编译的宏定义控制</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>nuttx_stm32_support</string>
+         </property>
+         <property name="toolTip">
+          <string>nuttx下stm32芯片的驱动模块支撑，包括驱动抽象，注册类型等</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>nuttx_stm32_start</string>
+         </property>
+         <property name="toolTip">
+          <string>nuttx下stm32的启动入口</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>nuttx_stm32_serial_init</string>
+         </property>
+         <property name="toolTip">
+          <string>nuttx下stm32串口的抽象</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>src_modules</string>
+         </property>
+         <property name="toolTip">
+          <string>px4的模块_模组</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>src_examples</string>
+         </property>
+         <property name="toolTip">
+          <string>px4的模块_样例</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>src_systemcmds</string>
+         </property>
+         <property name="toolTip">
+          <string>px4的模块_系统指令</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>src_drivers</string>
+         </property>
+         <property name="toolTip">
+          <string>px4的模块_驱动（特指针对设备的驱动）</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>src_drivers_boards_support</string>
+         </property>
+         <property name="toolTip">
+          <string>stm32对于nuttx下的驱动GPIO配置实现</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>uorb_message</string>
+         </property>
+         <property name="toolTip">
+          <string>uORB消息定义</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>uorb_makefile</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_define</string>
+         </property>
+         <property name="toolTip">
+          <string>mavlink标准消息定义xml</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_generate</string>
+         </property>
+         <property name="toolTip">
+          <string>依据mavlink消息生成的定义头文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_send_realization</string>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;mavlink消息实现，需要新建一个&lt;span style=&quot; font-weight:600;&quot;&gt;MavlinkStream&lt;/span&gt;的子类，然后完成相关方法；同时，在&lt;span style=&quot; font-weight:600;&quot;&gt;streams_list[]&lt;/span&gt;中添加自己新建的这个类！&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_send_config</string>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;对消息进行发送配置，在&lt;span style=&quot; font-weight:600;&quot;&gt;task_main()&lt;/span&gt;函数中，调用&lt;span style=&quot; font-weight:600;&quot;&gt;configure_stream(消息名称,频率)&lt;/span&gt;进行配置，如果没有调用该函数，mavlink是不会发出消息的。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_receive_def</string>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;mavlink消息的接收只由&lt;span style=&quot; font-weight:600;&quot;&gt;MavlinkReceiver&lt;/span&gt;进行处理，这里是在MavlinkReceiver类中增加方法定义，在.cpp文件中进行实现&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mavlink_msg_receive_realization</string>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;实现MavlinkReceiver中的方法，并在&lt;span style=&quot; font-weight:600;&quot;&gt;::handle_message&lt;/span&gt;中进行该方法调用&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonOpenPath">
+          <property name="text">
+           <string>Open Folder</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>557</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="mainframe.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonLoadPath</sender>
+   <signal>clicked()</signal>
+   <receiver>mainframeClass</receiver>
+   <slot>LoadWorkPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonOpenPath</sender>
+   <signal>clicked()</signal>
+   <receiver>mainframeClass</receiver>
+   <slot>OpenFolder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>585</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidgetItem</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>mainframeClass</receiver>
+   <slot>DoubleClickedList(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainframeClass</receiver>
+   <slot>Develop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>LoadWorkPath()</slot>
+  <slot>OpenFolder()</slot>
+  <slot>DoubleClickedList(QModelIndex)</slot>
+  <slot>Develop()</slot>
+ </slots>
+</ui>
